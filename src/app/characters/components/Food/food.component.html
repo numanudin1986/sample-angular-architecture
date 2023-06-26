@@ -1,0 +1,20 @@
+<div class="character">
+  <div class="character__image">
+    <img [src]="category.strCategoryThumb" [alt]="category.strCategory">
+  </div>
+
+  <div class="character__description">
+    <div class="character__name">
+      <strong>{{ category.strCategory }}</strong>
+    </div>
+
+  </div>
+  <div class="character__action">
+    <button *ngIf="!category.selected" (click)="selectfood()" class="btn btn-success">
+      Select
+    </button>
+    <button *ngIf="category.selected" (click)="unselectfood()" class="btn btn-danger">
+      Unselect
+    </button>
+  </div>
+</div>
